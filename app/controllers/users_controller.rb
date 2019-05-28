@@ -9,7 +9,14 @@ class UsersController < ApplicationController
       redirect_to celebrities_path
     else
       render :new
+    end
   end
+
+  def show
+    @user = current_user
+  end
+
+
 
   private
 

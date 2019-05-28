@@ -10,8 +10,8 @@ Rails.application.routes.draw do
 
   resources :bookings, only: [:index, :edit, :update]
 
-  get '/my-profile', to: 'user#profile'
-  get 'edit-profile/:id/form', to: 'user#edit'
-  patch 'edit-profile/:id', to: 'user#update'
+  get '/my-profile', to: 'users#show'
+  get 'edit-profile/:id/form', to: 'users#edit'
+  patch 'edit-profile/:id', to: 'users#update'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
