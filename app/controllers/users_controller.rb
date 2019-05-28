@@ -20,15 +20,16 @@ class UsersController < ApplicationController
     @user = current_user
   end
 
+  def update
+    @user = current_user
+    @user.update(user_params)
 
-
-
-
-
+    redirect_to my_profile_path
+  end
 
   private
 
   def user_params
-    params.require(:user).permit(:first_name, :last_name)
+    params.require(:user).permit(:first_name, :last_name, :date_of_birth, :gender)
   end
 end
