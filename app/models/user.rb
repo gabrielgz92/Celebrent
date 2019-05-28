@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  mount_uploader :photo, PhotoUploader
   has_many :bookings, dependent: :destroy
   has_many :celebrities, through: :bookings
   # Include default devise modules. Others available are:
