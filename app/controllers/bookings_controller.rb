@@ -1,6 +1,8 @@
 class BookingsController < ApplicationController
   before_action :set_booking, only: [:edit, :update]
 
+
+
   def edit
   end
 
