@@ -6,3 +6,6 @@
   <li>Birthday | <%= @celebrity.date_of_birth.strftime("%F") %></li>
   <li><%= @celebrity.description %></li>
 </ul>
+
+<%= render 'bookings/form', booking: @booking %>
+

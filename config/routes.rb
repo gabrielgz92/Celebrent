@@ -1,11 +1,10 @@
 Rails.application.routes.draw do
   get 'celebrties/index'
-  get 'celebrties/show'
   devise_for :users
   root to: 'celebrities#index'
 
  resources :celebrities, only: [:index, :show] do
-    resources :bookings, only: [:new, :create]
+    resources :bookings, only: [:create]
   end
 
   resources :bookings, only: [:index, :edit, :update]
