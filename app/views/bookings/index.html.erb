@@ -1,0 +1,8 @@
+<ul>
+  <% @user.bookings.each do |booking| %>
+    <li>
+      <%= booking.status %> |
+      <%= booking.celebrity.first_name %>
+    </li>
+  <% end %>
+</ul>
