@@ -1,6 +1,8 @@
 <div class="banner mb-2" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1549045872-0da5eb6316a2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2980&q=80);">
   <div class="container">
     <h1>Celebrent revolutionize the way of making friends, <strong>hanging out with a celebrity is not a dream anymore! </strong>!</h1>
-    <%= link_to 'Sign up now', new_user_registration_path, class: "btn btn-secondary mt-3" %>
+    <% if user_signed_in? == false %>
+      <%= link_to 'Sign up now', new_user_registration_path, class: "btn btn-secondary mt-3" %>
+    <% end %>
   </div>
 </div>
