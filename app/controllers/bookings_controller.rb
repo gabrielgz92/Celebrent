@@ -1,9 +1,15 @@
 class BookingsController < ApplicationController
+  before_action :set_booking, only: [:edit, :update]
 
   def edit
   end
 
   def update
+    if @booking.update
+      redirect_to @booking
+    else
+      render :edit
+    end
   end
 
   private
