@@ -1,4 +1,4 @@
-class CelebrtiesController < ApplicationController
+class CelebritiesController < ApplicationController
   def index
     @celebrties = Celebrity.all
   end
@@ -7,3 +7,4 @@ class CelebrtiesController < ApplicationController
     @celebrity = Celebrity.find(params[:id])
   end
 end
+
