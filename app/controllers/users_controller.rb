@@ -9,6 +9,7 @@ class UsersController < ApplicationController
       redirect_to celebrities_path
     else
       render :new
+    end
   end
 
   private
