@@ -3,4 +3,7 @@ class Celebrity < ApplicationRecord
   validates :first_name, :last_name, presence: true
   validates :last_name, uniqueness: { scope: :first_name }
   validates :photo, :description, :rate_per_hour, :date_of_birth, :gender, presence: true
+  def full_name
+    "#{self.first_name} #{self.last_name}"
+  end
 end
