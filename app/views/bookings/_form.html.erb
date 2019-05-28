@@ -1,0 +1,6 @@
+<%= simple_form_for [@celebrity, @booking] do |f| %>
+  <h5>Rate: <%= number_to_currency(@celebrity.rate_per_hour) %></h5>
+  <%= f.input :duration %>
+
+  <%= f.submit %>
+<% end %>
