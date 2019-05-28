@@ -5,6 +5,10 @@ class BookingsController < ApplicationController
   end
 
   def update
+    if @booking.update
+      redirect_to @booking
+    else
+      render :edit
   end
 
   private
