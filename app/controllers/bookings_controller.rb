@@ -9,6 +9,7 @@ class BookingsController < ApplicationController
       redirect_to @booking
     else
       render :edit
+    end
   end
 
   private
