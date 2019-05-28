@@ -1,11 +1,14 @@
-<h1><%= @celebrity.full_name %></h1>
-<%= image_tag(@celebrity.photo) %>
-<h3>Information</h3>
-<ul>
-  <li>Gender | <%= @celebrity.gender %></li>
-  <li>Birthday | <%= @celebrity.date_of_birth.strftime("%F") %></li>
-  <li><%= @celebrity.description %></li>
-</ul>
+<br>
 
-<%= render 'bookings/form', booking: @booking %>
-
+<div class="container">
+  <div class="card-product">
+    <%= image_tag(@celebrity.photo, class: "img") %>
+    <div class="card-product-infos">
+      <h1><%= @celebrity.full_name %></h2>
+      <p><%= @celebrity.gender %></p>
+      <p><%= @celebrity.date_of_birth.strftime("%F") %></p>
+      <p><%= @celebrity.description %></p>
+      <%= render 'bookings/form', booking: @booking %>
+    </div>
+  </div>
+</div>
