@@ -1,12 +1,11 @@
 <h1>hello, <%= @user.first_name%></h1>
 
 <ul>
-  <li><p><%= @user.first_name %></p></li>
-  <li><p><%= @user.last_name %></p></li>
+  <li><p><%= @user.first_name %> <%= @user.last_name %></p></li>
   <li><p><%= @user.gender %></p></li>
   <li><p><%= @user.date_of_birth %></p></li>
   <li><p><%= @user.email %></p></li>
 </ul>
 
-<%= link_to 'Edit profile', edit_profile_path(@user) %>
+<%= link_to 'Edit profile', edit_profile_path(@user), class: 'btn btn-primary' %>
 

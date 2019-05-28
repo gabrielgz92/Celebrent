@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(version: 2019_05_27_065604) do
     t.datetime "updated_at", null: false
     t.string "first_name"
     t.string "last_name"
-    t.datetime "date_of_birth"
+    t.date "date_of_birth"
     t.text "description"
     t.string "gender"
     t.string "photo"
