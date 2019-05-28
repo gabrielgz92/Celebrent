@@ -5,6 +5,9 @@
         <li>
         <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'nav-link btn btn-light' %>
         </li>
+         <li>
+        <%= link_to 'Profile', my_profile_path, class: 'nav-link btn btn-light' %>
+        </li>
       <% else %>
         <li>
         <%= link_to 'Login', user_session_path, class: 'nav-link btn btn-light' %>
