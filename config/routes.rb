@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'celebrties/index'
+  get 'celebrties/show'
   devise_for :users
   root to: 'celebrities#index'
 
