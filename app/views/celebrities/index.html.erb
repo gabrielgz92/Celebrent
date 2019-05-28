@@ -2,13 +2,13 @@
 
 
 <div class="card-columns">
-  <% @celebrties.each do |celebrity| %>
+  <% @celebrities.each do |celebrity| %>
   <div class="card">
     <img src=<%= celebrity.photo %> class="card-img-top" alt="...">
     <div class="card-body">
       <h5 class="card-title"><%= celebrity.first_name %></h5>
       <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      <%= link_to 'book', celebrity_path(celebrity,class: 'btn btn-secondary') %>
+      <%= link_to 'book', celebrity_path(celebrity) %>
     </div>
   </div>
   <% end %>

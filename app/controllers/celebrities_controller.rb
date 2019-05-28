@@ -1,6 +1,6 @@
 class CelebritiesController < ApplicationController
   def index
-    @celebrties = Celebrity.all
+    @celebrities = Celebrity.all
   end
 
   def show
