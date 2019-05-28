@@ -6,7 +6,7 @@
   <div class="card">
     <img src=<%= celebrity.photo %> class="card-img-top">
     <div class="card-body">
-      <h5 class="card-title"><%= celebrity.first_name %> <%= celebrity.last_name %></h5>
+      <h5 class="card-title"><%= celebrity.full_name %></h5>
       <p class="card-text"><i class="fas fa-dollar-sign"></i> <%= celebrity.rate_per_hour %> /per hour</p>
       <%= link_to 'book', celebrity_path(celebrity), class: "btn btn-secondary"  %>
     </div>
