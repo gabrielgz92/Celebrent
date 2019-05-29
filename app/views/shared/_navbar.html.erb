@@ -6,6 +6,10 @@
 
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <%= simple_form_for :search, url: celebrities_path, method: "GET", html: { class: 'form-inline' } do |f| %>
+      <%= f.input :name, label:false ,input_html: {value: ""} %>
+      <%= f.submit "Search", class: "btn btn-primary mr-2" %>
+      <% end %>
     <%= link_to 'Browse', celebrities_path, class: "nav-link btn btn-light mr-2" %>
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
