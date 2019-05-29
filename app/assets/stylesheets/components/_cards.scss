@@ -59,6 +59,7 @@
   display: flex;
   align-items: center;
   border: 20px;
+  margin: 8px 5px
 }
 
 .booking-product img {
@@ -83,10 +84,23 @@
 }
 
 .card-booking-infos {
+  display: flex;
   width: 600px;
-  padding: 5px;
+  height: 100px;
+  padding-left: 10px;
+  align-items: space-between;
 }
 
-.booking-product .card-booking-infos {
-  padding: 25px;
+#booking_status {
+  height: 25px;
+  width: 150px;
+  margin: 0px;
+}
+
+.booking-status-div {
+  width: 120px;
+  justify-content: space-between;
+  align-items: stretch;
+  margin: 0px;
+
 }
