@@ -149,3 +149,27 @@ a {
 .booking-product .card-booking-infos {
   padding: 25px;
 }
+
+.container-photo {
+  height: 400px;
+  width: 400px;
+}
+
+.img-show {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.container-show {
+  margin: auto;
+  width: 80vw;
+  display: flex;
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.container-info-text {
+  margin: 30px 79px;
+  text-align: center;
+}
