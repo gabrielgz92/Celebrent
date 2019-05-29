@@ -2,20 +2,19 @@
   <div class="container">
     <div class="content">
       <div class="content__container">
-        <p class="content__container__text">Hello</p>
+        <p class="content__container__text">Hang out with</p>
         <ul class="content__container__list">
-          <li class="content__container__list__item">world !</li>
-          <li class="content__container__list__item">bob !</li>
-          <li class="content__container__list__item">users !</li>
-          <li class="content__container__list__item">everybody !</li>
+          <% @celebrities.each do |celebrity| %>
+          <li class="content__container__list__item"><%= celebrity.first_name %>!</li>
+          <% end %>
         </ul>
       </div>
     </div>
-    <div class="container mb-4">
+    <!-- <div class="container mb-4">
       <h1>Celebrent revolutionize the way of making friends, <strong>hanging out with a celebrity is not a dream anymore! </strong>!</h1>
       <% if user_signed_in? == false %>
         <%= link_to 'Sign up now', new_user_registration_path, class: "btn btn-secondary mt-3" %>
       <% end %>
-    </div>
+    </div> -->
   </div>
 </div>
