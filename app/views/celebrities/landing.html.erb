@@ -1,1 +1,22 @@
 <%= render 'banner' %>
+<div class="black-bg">
+  <div class="container">
+    <div class="neon"><p class="outline text-center">
+      CELEBRITIES FOR RENT</p>
+    </div>
+    <div class="card-deck">
+      <% @celebrities.each do |celebrity| %>
+      <div class="card">
+        <%= image_tag(celebrity.photo, class: "card-img-top card-img-size")%>
+        <div class="card-body">
+          <h5 class="card-title"><%= celebrity.full_name %></h5>
+          <p class="card-text"><%= celebrity.description %></p>
+          <p class="card-text"><i class="fas fa-dollar-sign"></i> <%= celebrity.rate_per_hour %></p>
+          <%= link_to 'Book Now', celebrity_path(celebrity), class: "btn btn-secondary" %>
+          <p class="card-text"><small class="text-muted">Last booked <%= rand(1..10) %> mins ago</small></p>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
