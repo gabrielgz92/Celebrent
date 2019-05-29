@@ -1,19 +1,30 @@
+<p></p>
 <h1>Bookings for <%= current_user.first_name %> </h1>
+<br>
   <% @bookings.each do |booking| %>
-  <div class="booking-product">
-  <%= image_tag(booking.celebrity.photo, class: "avatar") %>
-  <div class="card-booking-infos">
-    <h2>Celebrity: <%= booking.celebrity.first_name %> <%= booking.celebrity.last_name %></h2>
-    <p>Booking status: <strong><%= booking.status %></strong></p>
-    <p>Duration: <strong><%= booking.duration %> hours</strong></p>
-    <p>Rate per hour: <strong>$<%= booking.rate_per_hour %></strong></p>
-    <p>Total: <strong>$<%=booking.duration*booking.rate_per_hour %></strong></p>
-  </div>
+  <% if booking.status!= 'Cancelled' %>
+    <div class="booking-product">
+    <%= image_tag(booking.celebrity.photo, class: "avatar") %>
+    <div class="card-booking-infos">
+      <div class="card-booking-name">
+        <h2><%= booking.celebrity.first_name %> <%= booking.celebrity.last_name %></h2>
+      </div>
+      <div class="booking-status-div">
+        <p>Duration: <%= render 'bookings/update', booking: booking %></p>
+        <p>Status: <strong><%= booking.status %></strong></p>
+      </div>
+      <div class='card-rate-infos'>
+        <p>Rate per hour: <strong>$<%= booking.rate_per_hour %></strong></p>
+        <p>Total: <strong>$<%=booking.duration*booking.rate_per_hour %></strong></p>
+      </div>
 
-  <div class="card-booking-buttons">
-    <%= link_to "Edit booking", edit_booking_path(booking), class: 'btn btn-primary' %>
+    </div>
+
+    <div class="card-booking-buttons">
+      <%= link_to "Cancel booking", edit_booking_path(booking), class: 'btn btn-primary' %>
     <%= link_to "Back to Profile", my_profile_path, class: 'btn btn-primary' %>
   </div>
+  <% end %>
 </div>
   <% end %>
 
