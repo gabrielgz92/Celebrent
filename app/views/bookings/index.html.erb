@@ -7,13 +7,14 @@
     <%= image_tag(booking.celebrity.photo, class: "avatar") %>
     <div class="card-booking-infos">
       <div class="card-booking-name">
+        <p></p>
         <h2><%= booking.celebrity.first_name %> <%= booking.celebrity.last_name %></h2>
       </div>
       <div class="booking-status-div">
         <p>Duration: <%= render 'bookings/update', booking: booking %></p>
-        <p>Status: <strong><%= booking.status %></strong></p>
       </div>
       <div class='card-rate-infos'>
+        <p>Status: <strong><%= booking.status %></strong></p>
         <p>Rate per hour: <strong>$<%= booking.rate_per_hour %></strong></p>
         <p>Total: <strong>$<%=booking.duration*booking.rate_per_hour %></strong></p>
       </div>
