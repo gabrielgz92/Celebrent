@@ -13,7 +13,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.status = 'Pending'
     if @booking.save
-      redirect_to celebrities_path
+      redirect_to bookings_path
     else
       render 'celebrities/show'
     end
