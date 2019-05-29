@@ -18,6 +18,8 @@ CELEBRITIES = [
   {
     first_name: 'Carlos',
     last_name: 'Tevez',
+    city: 'Ciudadela',
+    country: 'Argentina',
     description: 'Soccer player, nice guy',
     gender: 'Male',
     date_of_birth: Date.parse("Feb 5 1984"),
@@ -27,6 +29,8 @@ CELEBRITIES = [
   {
     first_name: 'Hugh',
     last_name: 'Grant',
+    city: 'London',
+    country: 'United Kingdom',
     description: 'Actor',
     gender: 'Male',
     date_of_birth: Date.parse("Sep 9 1960"),
@@ -36,6 +40,8 @@ CELEBRITIES = [
    {
     first_name: 'Emma',
     last_name: 'Stone',
+    city: 'New York',
+    country: 'United States of America',
     description: 'Actress',
     gender: 'Female',
     date_of_birth: Date.parse("Nov 6 1988"),
@@ -45,6 +51,8 @@ CELEBRITIES = [
   {
     first_name: 'Barack',
     last_name: 'Obama',
+    city: 'Washington DC',
+    country: 'United States of America',
     description: 'Politician',
     gender: 'Male',
     date_of_birth: Date.parse("Aug 4 1961"),
@@ -54,6 +62,8 @@ CELEBRITIES = [
   {
     first_name: 'Taylor',
     last_name: 'Swift',
+    city: 'Los Angeles',
+    country: 'United States of America',
     description: 'Singer',
     gender: 'Female',
     date_of_birth: Date.parse("Dec 13 1989"),
@@ -63,6 +73,8 @@ CELEBRITIES = [
   {
     first_name: 'Robert',
     last_name: 'Downey Jr',
+    city: 'Los Angeles',
+    country: 'United States of America',
     description: 'Actor',
     gender: 'Male',
     date_of_birth: Date.parse("Apr 4 1965"),
@@ -72,6 +84,8 @@ CELEBRITIES = [
   {
     first_name: 'Beyonce',
     last_name: 'Knowles',
+    city: 'Chicago',
+    country: 'United States of America',
     description: 'Singer',
     gender: 'Female',
     date_of_birth: Date.parse("Sep 4 1981"),
@@ -81,6 +95,8 @@ CELEBRITIES = [
   {
     first_name: 'Kim',
     last_name: 'Kardashian',
+    city: 'Los Angeles',
+    country: 'United States of America',
     description: 'Rubbish',
     gender: 'Female',
     date_of_birth: Date.parse("Oct 21 1980"),
@@ -90,6 +106,8 @@ CELEBRITIES = [
   {
     first_name: 'Tom',
     last_name: 'Cruise',
+    city: 'Los Angeles',
+    country: 'United States of America',
     description: 'Actor',
     gender: 'Male',
     date_of_birth: Date.parse("Jul 3 1962"),
@@ -99,6 +117,8 @@ CELEBRITIES = [
   {
     first_name: 'Hillary',
     last_name: 'Clinton',
+    city: 'Washington DC',
+    country: 'United States of America',
     description: 'Politician',
     gender: 'Female',
     date_of_birth: Date.parse("Oct 26 1947"),
