@@ -1,8 +1,9 @@
 class BookingsController < ApplicationController
-  before_action :set_booking, except: [:create, :index]
+  before_action :set_booking, only: [:edit, :update]
+  before_action :set_celebrity, only: :create
 
   def index
-    @bookings = Booking.all
+    @bookings = current_user.bookings
   end
 
   def create
@@ -38,5 +39,9 @@ class BookingsController < ApplicationController
 
   def set_booking
     @bookings = Booking.find(params[:id])
+  end
+
+  def set_celebrity
+    @celebrity = Celebrity.find(params[:celebrity_id])
   end
 end
