@@ -11,5 +11,6 @@ class CelebritiesController < ApplicationController
   end
 
   def landing
+    @celebrities = Celebrity.order('RANDOM()').first(4)
   end
 end

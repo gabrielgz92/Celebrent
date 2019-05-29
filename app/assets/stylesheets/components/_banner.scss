@@ -14,7 +14,13 @@
   font-weight: bold;
 }
 
-.banner p {
+.banner h5 {
+  color: white;
+  opacity: .8;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.banner-slogan {
   color: white;
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
@@ -36,15 +42,15 @@
   overflow:hidden;
 
   font-family: 'Lato', sans-serif;
-  font-size: 35px;
-  line-height: 40px;
+  font-size: 50px;
+  line-height: 60px;
   color: #ecf0f1;
 
   &__container {
     font-weight: 600;
     overflow: hidden;
-    height: 40px;
-    padding: 0 40px;
+    height: 60px;
+    padding: 0 70px;
 
     &:before {
       content: '[';
@@ -81,9 +87,10 @@
 
     &__list {
       margin-top: 0;
-      padding-left: 110px;
+      padding-left: 250px;
       text-align: left;
       list-style: none;
+      margin-left: 100px;
 
       -webkit-animation-name: change;
       -webkit-animation-duration: 10s;
@@ -94,7 +101,7 @@
 
       &__item {
         line-height:40px;
-        margin:0;
+        margin:60px;
       }
     }
   }
@@ -173,3 +180,61 @@
 // x = 12.66 -> Time spent on a line
 
 // You can define a value and calculate the other if you want change speed or the number of lines
+
+*{
+  box-sizing: border-box;
+}
+
+span{
+  margin: 0;
+  padding: 0;
+}
+
+
+
+.outline{
+    color: black;
+   -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+   -webkit-text-stroke-width: 2px;
+   -webkit-text-stroke-color: orange;
+   font-size: 64px;
+  font-family: 'Arvo', serif;
+}
+
+.orbs{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 100;
+  display: block;
+  font-size: 128px;
+
+
+  span{
+     color: red;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    text-shadow: 0 0 20px orange, 1px 1px 20px orange, 2px 2px 20px orange, -1px -1px 20px orange, -2px -2px 20px orange;
+    position: absolute;
+    left: 50%;
+
+    &:first-child{
+      margin-left: -210px;
+    }
+s
+    &:not(:first-child){
+      margin-left: -35px;
+    }
+  }
+}
+
+.glow{
+  opacity: 0;
+  font-family: 'Arvo', serif;
+  font-weight: 300;
+  color: orange;
+  margin-left: -222.5px;
+  font-size: 105px;
+  position: absolute;
+  top: 200px;
+  left: 50%;
+}
