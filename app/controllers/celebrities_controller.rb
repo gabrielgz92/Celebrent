@@ -9,4 +9,7 @@ class CelebritiesController < ApplicationController
     @celebrity = Celebrity.find(params[:id])
     @booking = Booking.new(rate_per_hour: @celebrity.rate_per_hour)
   end
+
+  def landing
+  end
 end
