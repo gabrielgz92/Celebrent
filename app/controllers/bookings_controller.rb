@@ -1,5 +1,10 @@
 class BookingsController < ApplicationController
-  before_action :set_celebrity, except: :destroy
+  before_action :set_booking, only: [:edit, :update]
+  before_action :set_celebrity, only: :create
+
+  def index
+    @bookings = current_user.bookings
+  end
 
   def create
     @booking = Booking.new(booking_params)
@@ -18,8 +23,9 @@ class BookingsController < ApplicationController
   end
 
   def update
-    if @booking.update
-      redirect_to @booking
+    @booking = Booking.find(params[:id])
+    if @booking.update(booking_params)
+      redirect_to bookings_path
     else
       render :edit
     end
@@ -29,6 +35,10 @@ class BookingsController < ApplicationController
 
   def booking_params
     params.require(:booking).permit(:status, :duration, :rate_per_hour, :user_id, :celebrity_id)
+  end
+
+  def set_booking
+    @bookings = Booking.find(params[:id])
   end
 
   def set_celebrity

@@ -1,0 +1,11 @@
+<h1>Bookings for <%= current_user.first_name %></h1>
+<% @bookings.each do |booking| %>
+<p>Celebrity name: <%= booking.celebrity.first_name %> <%= booking.celebrity.last_name %> </p>
+<p>Booking status: <%= booking.status %></p>
+<p>Duration: <%= booking.duration %> hours</p>
+<p>Rate per hour: $<%= booking.rate_per_hour %></p>
+<p>Total: $<%=booking.duration*booking.rate_per_hour %></p>
+<%= link_to "Edit booking", edit_booking_path(booking), class: 'btn btn-primary' %>
+<p></p>
+<%= link_to "Back to Profile", my_profile_path, class: 'btn btn-primary' %>
+<% end %>
