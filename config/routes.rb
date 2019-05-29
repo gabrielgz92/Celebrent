@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'celebrties/index'
+  get 'celebrities/index'
   devise_for :users
   root to: 'celebrities#landing'
 
