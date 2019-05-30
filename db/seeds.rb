@@ -5,11 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-# require 'time'
 
-# puts "Cleaning up database..."
-# [Booking, Celebrity, User].each(&:destroy_all)
-# puts "----------------------"
+require 'time'
+
+puts "Cleaning up database..."
+[Booking].each(&:destroy_all)
+puts "----------------------"
 
 
 # puts "Seeding Celebrities..."
@@ -156,24 +157,25 @@
 # User.create!(USERS)
 # puts "Created #{User.count} users"
 
-# puts "----------------------"
-# puts "Seeding Bookings..."
+puts "----------------------"
+puts "Seeding Bookings..."
 
-# BOOKINGS = [
-#   {
-#     status: 'Pending',
-#     duration: 3,
-#     rate_per_hour: Celebrity.first[:rate_per_hour],
-#     user_id: User.first[:id],
-#     celebrity_id: Celebrity.first[:id]
-#   }
-# ]
+BOOKINGS = [
+  {
+    status: 'Pending',
+    duration: 3,
+    rate_per_hour: Celebrity.first[:rate_per_hour],
+    user_id: User.first[:id],
+    celebrity_id: Celebrity.first[:id],
+    booking_date: Date.parse("08 June 2019")
+  }
+]
 
-# Booking.create!(BOOKINGS)
-# puts "Created #{Booking.count} bookings"
+Booking.create!(BOOKINGS)
+puts "Created #{Booking.count} bookings"
+puts "----------------------"
 
-# puts "----------------------"
-# puts "Seeding Bookings..."
+puts "Seeding Tags..."
 
 
 10.times do
