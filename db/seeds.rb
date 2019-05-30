@@ -5,11 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
 require 'time'
 
-# puts "Cleaning up database..."
-# [Booking, Celebrity, User].each(&:destroy_all)
-# puts "----------------------"
+puts "Cleaning up database..."
+[Booking].each(&:destroy_all)
+puts "----------------------"
 
 
 # puts "Seeding Celebrities..."
@@ -173,6 +174,19 @@ BOOKINGS = [
 Booking.create!(BOOKINGS)
 puts "Created #{Booking.count} bookings"
 puts "----------------------"
+
+puts "Seeding Tags..."
+
+
+10.times do
+  Tag.create!(
+    name: Faker::Demographic.race
+  )
+end
+
+puts "Created #{Tag.count} tags"
+puts "----------------------"
+
 puts "Finished"
 
 

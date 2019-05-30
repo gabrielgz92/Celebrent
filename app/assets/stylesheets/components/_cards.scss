@@ -110,9 +110,17 @@ a {
   padding: 16px;
 }
 
+.booking-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 800px;
+}
+
 .booking-product {
   overflow: hidden;
   height: 120px;
+  width: 800px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
@@ -144,7 +152,7 @@ a {
 
 .card-booking-infos {
   display: flex;
-  width: 600px;
+  width: 500px;
   height: 100px;
   padding-left: 10px;
   align-items: space-between;
@@ -152,15 +160,22 @@ a {
 
 #booking_duration {
   height: 25px;
-  width: 50px;
   margin: 0px;
+}
 
+.edit_booking {
+  display: flex;
+  align-items: space-between;
+}
+
+#booking_duration {
+  margin-right: 30px;
 }
 
 .booking-status-div {
-  width: 120px;
+  width: 240px;
   justify-content: space-between;
-  align-items: stretch;
+  align-items: flex-start;
   margin: 0px;
   padding-right: 10px;
   padding-left: 10px;
@@ -173,6 +188,7 @@ a {
 .container-photo {
   height: 400px;
   width: 400px;
+  // object-fit: cover;
 }
 
 .img-show {
@@ -187,6 +203,18 @@ a {
   display: flex;
   background-color: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  height: 400px;
+  border-radius: 2px;
+}
+
+.container-show-b {
+  margin: auto;
+  width: 60vw;
+  display: flex;
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  height: 400px;
+  border-radius: 2px;
 }
 
 .container-info-text {

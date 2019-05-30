@@ -44,6 +44,21 @@ ActiveRecord::Schema.define(version: 2019_05_30_050735) do
     t.string "country"
   end
 
+  create_table "celebrity_tags", force: :cascade do |t|
+    t.bigint "celebrity_id"
+    t.bigint "tag_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["celebrity_id"], name: "index_celebrity_tags_on_celebrity_id"
+    t.index ["tag_id"], name: "index_celebrity_tags_on_tag_id"
+  end
+
+  create_table "tags", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -64,4 +79,6 @@ ActiveRecord::Schema.define(version: 2019_05_30_050735) do
 
   add_foreign_key "bookings", "celebrities"
   add_foreign_key "bookings", "users"
+  add_foreign_key "celebrity_tags", "celebrities"
+  add_foreign_key "celebrity_tags", "tags"
 end

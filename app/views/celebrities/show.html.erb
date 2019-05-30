@@ -13,10 +13,10 @@
     <p><%= @celebrity.gender %></p>
     <p><%= @celebrity.date_of_birth.strftime("%F") %></p>
     <p><%= @celebrity.description %></p>
-    <%= render 'bookings/form', booking: @booking %>
+    <%= render 'bookings/form', booking: @booking%>
   </div>
   <div class="container-map">
-    <div class="map"
+    <div
       id="map"
       style="width: 400px;
       height: 400px;"
@@ -24,8 +24,9 @@
       data-mapbox-api-key=<%= ENV['MAPBOX_API_KEY'] %>
     ></div>
   </div>
-
 </div>
+
+<%= link_to "Add Tags", new_celebrity_celebrity_tag_path(@celebrity) %>
 
 
 

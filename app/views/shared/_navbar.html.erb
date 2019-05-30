@@ -6,15 +6,17 @@
 
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <%= simple_form_for :search, url: celebrities_path, method: "GET", html: { class: 'form-inline' } do |f| %>
-      <%= f.input :name, label:false ,input_html: {value: ""} %>
-      <%= f.submit "Search", class: "btn btn-primary mr-2" %>
+    <%= form_tag celebrities_path, method: :get do %>
+      <%= text_field_tag :query,
+          params[:query],
+          class: "form-control mr-2",
+          placeholder: "find a celebrity"
+      %>
       <% end %>
-    <%= link_to 'Browse', celebrities_path, class: "nav-link btn btn-light mr-2" %>
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
       <li class="nav-item active">
-        <%= link_to "Bookings", bookings_path, class: "nav-link btn btn-light mr-2" %>
+        <%= link_to "Bookings", bookings_path, class: " btn-outline-light btn mx-2" %>
       </li>
       <li class="nav-item dropdown">
         <%= cl_image_tag current_user.photo, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
