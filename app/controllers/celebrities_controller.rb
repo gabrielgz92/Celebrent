@@ -7,7 +7,8 @@ class CelebritiesController < ApplicationController
     @markers = @celebrities.map do |celebrity|
       {
         lat: celebrity.latitude,
-        lng: celebrity.longitude
+        lng: celebrity.longitude ,
+        infoWindow: render_to_string(partial: "infowindow", locals: { celebrity: celebrity })
       }
     end
   end

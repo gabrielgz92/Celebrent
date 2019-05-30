@@ -22,10 +22,16 @@ const buildMap = () => {
 
 const addMarkersToMap = (map, markers) => {
   markers.forEach((marker) => {
-    console.log("running...")
-    new mapboxgl.Marker()
-      .setLngLat([ marker.lng, marker.lat ])
-      .addTo(map);
+    const popup = new mapboxgl.Popup().setHTML(marker.infoWindow);
+    console.log(popup)
+    const mapMarker = new mapboxgl.Marker()
+     mapMarker.setLngLat([ marker.lng, marker.lat ])
+
+     if (markers.length > 1) {
+      mapMarker.setPopup(popup);
+     }
+
+      mapMarker.addTo(map);
   })
 };
 
