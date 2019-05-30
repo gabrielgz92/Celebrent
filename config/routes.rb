@@ -9,8 +9,8 @@ Rails.application.routes.draw do
   end
 
   resources :bookings, only: [:index, :edit, :update]
-
   resources :users, only: :update
+  resources :wishlists, only: :destroy
 
   get '/landing', to: 'celebrities#landing'
 
