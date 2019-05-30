@@ -1,14 +1,19 @@
 <br>
 <br>
 <div class="container-show">
-
   <div class="container-photo">
     <%= image_tag(@celebrity.photo, class: "img-show" ) %>
   </div>
 
 
   <div class="container-info-text">
-    <h3><%= @celebrity.full_name %></h3>
+    <h3><%= @celebrity.full_name %>
+      <% if current_user.wishlisted_celebrity?(@celebrity) %>
+        <i class="fas fa-heart black"></i>
+      <% else %>
+      <%= link_to celebrity_wishlists_path(@celebrity), method: :post do %><i class="far fa-heart black"></i><% end %>
+      <% end %>
+    </h3>
     <br>
     <p><%= @celebrity.gender %></p>
     <p><%= @celebrity.date_of_birth.strftime("%F") %></p>
@@ -24,6 +29,10 @@
       data-mapbox-api-key=<%= ENV['MAPBOX_API_KEY'] %>
     ></div>
   </div>
+
+</div>
+<div class="test">
+
 </div>
 
 <%= link_to "Add Tags", new_celebrity_celebrity_tag_path(@celebrity) %>

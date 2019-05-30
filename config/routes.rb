@@ -6,12 +6,13 @@ Rails.application.routes.draw do
 
  resources :celebrities, only: [:index, :show] do
     resources :bookings, only: [:create]
+    resources :wishlists, only: [:create, :destroy]
     resources :celebrity_tags, only: [:new, :create]
   end
 
   resources :bookings, only: [:index, :edit, :update, :destroy]
-
   resources :users, only: :update
+  resources :wishlists, only: :destroy
 
   get '/landing', to: 'celebrities#landing'
 
