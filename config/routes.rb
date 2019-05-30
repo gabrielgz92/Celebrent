@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
  resources :celebrities, only: [:index, :show] do
     resources :bookings, only: [:create]
+    resources :celebrity_tags, only: [:new, :create]
   end
 
   resources :bookings, only: [:index, :edit, :update]

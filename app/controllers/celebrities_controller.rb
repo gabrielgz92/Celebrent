@@ -9,7 +9,6 @@ class CelebritiesController < ApplicationController
     @celebrities = Celebrity.where.not(latitude: nil, longitude: nil)
     @celebrity = @celebrities.find(params[:id])
     @booking = Booking.new(rate_per_hour: @celebrity.rate_per_hour)
-
     @markers =
       {
         lat: @celebrity.latitude,
