@@ -1,5 +1,7 @@
 class Celebrity < ApplicationRecord
   has_many :bookings
+  has_many :celebrity_tags
+  has_many :tags, through: :celebrity_tags
 
   validates :first_name, :last_name, presence: true
   validates :last_name, uniqueness: { scope: :first_name }
