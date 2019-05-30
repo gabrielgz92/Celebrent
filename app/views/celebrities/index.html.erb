@@ -1,24 +1,32 @@
-<div class="main" style="background-color:black">
-  <div class="cards">
-    <% @celebrities.each do |celebrity| %>
-    <div class="card">
-      <%= image_tag(celebrity.photo, class: "card-img") %>
+
+<% if @celebrities.any? %>
+  <div class="main" style="background-color:black">
+    <div class="cards">
+      <% @celebrities.each do |celebrity| %>
+      <div class="card">
+        <%= image_tag(celebrity.photo, class: "card-img") %>
 
 
-      <div class="card-trip-infos">
-        <div>
-          <h2><%= celebrity.full_name %></h2>
-          <p><%= celebrity.description %></p>
+        <div class="card-trip-infos">
+          <div>
+            <h2><%= celebrity.full_name %></h2>
+            <p><%= celebrity.description %></p>
+          </div>
+          <h2 class="card-trip-pricing">$<%= celebrity.rate_per_hour %></h2>
+          <!-- <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="card-trip-user avatar-bordered"/> -->
         </div>
-        <h2 class="card-trip-pricing">$<%= celebrity.rate_per_hour %></h2>
-        <!-- <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="card-trip-user avatar-bordered"/> -->
+        <button type="button" class="btn btn-secondary">
+          <%= link_to "Book me!", celebrity_path(celebrity["id"])%></button>
       </div>
-      <button type="button" class="btn btn-secondary">
-        <%= link_to "Book me!", celebrity_path(celebrity["id"])%></button>
+      <% end %>
     </div>
-    <% end %>
   </div>
-</div>
+<% else %>
+  <div class="no-results">
+    <p>Opps, No Results Found</p>
+  </div>
+<% end %>
+
 
 
 
