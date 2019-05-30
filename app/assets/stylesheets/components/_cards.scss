@@ -152,9 +152,7 @@ a {
 
 #booking_duration {
   height: 25px;
-  width: 50px;
   margin: 0px;
-
 }
 
 .booking-status-div {
@@ -173,6 +171,7 @@ a {
 .container-photo {
   height: 400px;
   width: 400px;
+  // object-fit: cover;
 }
 
 .img-show {
@@ -187,6 +186,18 @@ a {
   display: flex;
   background-color: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  height: 400px;
+  border-radius: 2px;
+}
+
+.container-show-b {
+  margin: auto;
+  width: 60vw;
+  display: flex;
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  height: 400px;
+  border-radius: 2px;
 }
 
 .container-info-text {

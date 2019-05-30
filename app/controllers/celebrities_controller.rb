@@ -2,7 +2,14 @@ class CelebritiesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show, :landing]
 
   def index
-    @celebrities = Celebrity.all
+    @celebrities = Celebrity.where.not(latitude: nil, longitude: nil)
+
+    @markers = @celebrities.map do |celebrity|
+      {
+        lat: celebrity.latitude,
+        lng: celebrity.longitude
+      }
+    end
   end
 
   def show
@@ -10,11 +17,12 @@ class CelebritiesController < ApplicationController
     @celebrity = @celebrities.find(params[:id])
     @booking = Booking.new(rate_per_hour: @celebrity.rate_per_hour)
 
-    @markers =
+    @markers = [
       {
         lat: @celebrity.latitude,
         lng: @celebrity.longitude
       }
+    ]
   end
 
   def landing
