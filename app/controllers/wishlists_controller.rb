@@ -1,14 +1,17 @@
 class WishlistsController < ApplicationController
   before_action :set_celebrity, only: [:create, :destroy]
+  before_action :set_wishlist, only: :destroy
   def index
     @wishlists = current_user.wishlists
   end
 
   def create
-    @wishlist = Wishlist.new(wishlist_params)
+    @wishlist = Wishlist.new
     @wishlist.celebrity = @celebrity
     @wishlist.user = current_user
     @wishlist.save
+
+    redirect_to celebrity_path(@celebrity)
   end
 
   def destroy
@@ -16,10 +19,6 @@ class WishlistsController < ApplicationController
   end
 
   private
-
-  def wishlist_params
-    params.require(:wishlist).permit(:user_id, :celebrity_id)
-  end
 
   def set_celebrity
     @celebrity = Celebrity.find(params[:celebrity_id])

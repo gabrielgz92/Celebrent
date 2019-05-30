@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
  resources :celebrities, only: [:index, :show] do
     resources :bookings, only: [:create]
-    resources :wishlists, only: [:create]
+    resources :wishlists, only: [:create, :destroy]
   end
 
   resources :bookings, only: [:index, :edit, :update]
