@@ -165,7 +165,8 @@ BOOKINGS = [
     duration: 3,
     rate_per_hour: Celebrity.first[:rate_per_hour],
     user_id: User.first[:id],
-    celebrity_id: Celebrity.first[:id]
+    celebrity_id: Celebrity.first[:id],
+    booking_date: Date.parse("08 June 2019")
   }
 ]
 
