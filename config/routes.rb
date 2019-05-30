@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
   resources :bookings, only: [:index, :edit, :update, :destroy]
   resources :users, only: :update
-  resources :wishlists, only: :destroy
+  resources :wishlists, only: [:destroy, :index]
 
   get '/landing', to: 'celebrities#landing'
 

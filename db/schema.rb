@@ -9,6 +9,7 @@
 # you'll amass, the slower it'll run and the greater likelihood for issues).
 #
 # It's strongly recommended that you check this file into your version control system.
+
 ActiveRecord::Schema.define(version: 2019_05_30_050735) do
 
   # These are extensions that must be enabled in order to support this database
@@ -85,10 +86,8 @@ ActiveRecord::Schema.define(version: 2019_05_30_050735) do
 
   add_foreign_key "bookings", "celebrities"
   add_foreign_key "bookings", "users"
-
-  add_foreign_key "wishlists", "celebrities"
-  add_foreign_key "wishlists", "users"
-
   add_foreign_key "celebrity_tags", "celebrities"
   add_foreign_key "celebrity_tags", "tags"
-
+  add_foreign_key "wishlists", "celebrities"
+  add_foreign_key "wishlists", "users"
+end
