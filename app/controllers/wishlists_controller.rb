@@ -1,6 +1,5 @@
 class WishlistsController < ApplicationController
   before_action :set_celebrity, only: [:create, :destroy]
-  before_action :set_wishlist, only: :destroy
   def index
     @wishlists = current_user.wishlists
   end
@@ -15,16 +14,15 @@ class WishlistsController < ApplicationController
   end
 
   def destroy
+    @wishlist = Wishlist.find(params[:id])
     @wishlist.destroy
+
+    redirect_to celebrity_path(@celebrity)
   end
 
   private
 
   def set_celebrity
     @celebrity = Celebrity.find(params[:celebrity_id])
-  end
-
-  def set_wishlist
-    @wishlist = Wishlist.find(params[:id])
   end
 end
