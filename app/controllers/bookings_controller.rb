@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  before_action :set_booking, only: [:edit, :update]
+  before_action :set_booking, only: [:edit, :update, :destroy]
   before_action :set_celebrity, only: :create
 
   def index
@@ -29,6 +29,12 @@ class BookingsController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def destroy
+    @bookings.update(status: 'Cancelled')
+
+    redirect_to bookings_path
   end
 
   private
