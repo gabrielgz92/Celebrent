@@ -33,4 +33,4 @@ end
 
 gem 'devise'
 gem 'geocoder'
-
+gem 'faker'
