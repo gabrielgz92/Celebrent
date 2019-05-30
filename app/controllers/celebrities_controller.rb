@@ -2,7 +2,11 @@ class CelebritiesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show, :landing]
 
   def index
-    @celebrities = Celebrity.all
+    if params[:query].present?
+      @celebrities = Celebrity.search_by_firs_name_and_last_name_and_description(params[:query])
+    else
+      @celebrities = Celebrity.all
+    end
   end
 
   def show

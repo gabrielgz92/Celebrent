@@ -1,4 +1,11 @@
 class Celebrity < ApplicationRecord
+  include PgSearch
+  pg_search_scope :search_by_firs_name_and_last_name_and_description,
+                  against: [:last_name, :first_name, :description],
+                  using: {
+                    tsearch: { prefix: true } # <-- now `superman batm` will return something!
+                  }
+
   has_many :bookings
   has_many :celebrity_tags
   has_many :tags, through: :celebrity_tags
