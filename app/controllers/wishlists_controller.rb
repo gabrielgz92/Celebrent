@@ -1,5 +1,5 @@
 class WishlistsController < ApplicationController
-  before_action :set_celebrity, only: [:create, :destroy]
+  before_action :set_celebrity, only: %i[create destroy]
   def index
     @wishlists = current_user.wishlists
   end
