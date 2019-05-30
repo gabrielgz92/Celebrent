@@ -4,6 +4,10 @@ class CelebritiesController < ApplicationController
   def index
     @celebrities = Celebrity.where.not(latitude: nil, longitude: nil)
 
+    if params[:query].present?
+      @celebrities = @celebrities.search_by_firs_name_and_last_name_and_description(params[:query])
+    end
+
     @markers = @celebrities.map do |celebrity|
       {
         lat: celebrity.latitude,
