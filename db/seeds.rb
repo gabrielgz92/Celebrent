@@ -157,32 +157,41 @@ puts "----------------------"
 # User.create!(USERS)
 # puts "Created #{User.count} users"
 
-puts "----------------------"
-puts "Seeding Bookings..."
+# puts "----------------------"
+# puts "Seeding Bookings..."
 
-BOOKINGS = [
-  {
-    status: 'Pending',
-    duration: 3,
-    rate_per_hour: Celebrity.first[:rate_per_hour],
-    user_id: User.first[:id],
-    celebrity_id: Celebrity.first[:id],
-    booking_date: Date.parse("08 June 2019")
-  }
-]
+# BOOKINGS = [
+#   {
+#     status: 'Pending',
+#     duration: 3,
+#     rate_per_hour: Celebrity.first[:rate_per_hour],
+#     user_id: User.first[:id],
+#     celebrity_id: Celebrity.first[:id],
+#     booking_date: Date.parse("08 June 2019")
+#   }
+# ]
 
-Booking.create!(BOOKINGS)
-puts "Created #{Booking.count} bookings"
-puts "----------------------"
+# Booking.create!(BOOKINGS)
+# puts "Created #{Booking.count} bookings"
+# puts "----------------------"
 
 puts "Seeding Tags..."
 
+# 10.times do
+#   Tag.create!(
+#     name: Faker::Demographic.race
+#   )
+# end
 
-10.times do
-  Tag.create!(
-    name: Faker::Demographic.race
-  )
-end
+TAGS = [
+  {name: 'Ginger'},
+  {name: 'English'},
+  {name: 'Soccer Player'},
+  {name: 'Ex-president'},
+  {name: 'cat person'}
+]
+
+Tag.create!(TAGS)
 
 puts "Created #{Tag.count} tags"
 puts "----------------------"
