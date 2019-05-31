@@ -9,7 +9,7 @@
 require 'time'
 
 puts "Cleaning up database..."
-[Booking].each(&:destroy_all)
+[Tag].each(&:destroy_all)
 puts "----------------------"
 
 
@@ -184,11 +184,19 @@ puts "Seeding Tags..."
 # end
 
 TAGS = [
-  {name: 'Ginger'},
-  {name: 'English'},
-  {name: 'Soccer Player'},
-  {name: 'Ex-president'},
-  {name: 'cat person'}
+  {name: 'ginger'},
+  {name: 'english'},
+  {name: 'soccer player'},
+  {name: 'ex-president'},
+  {name: 'cat person'},
+  {name: 'singer'},
+  {name: 'actress'},
+  {name: 'fashion'},
+  {name: 'luxury'},
+  {name: 'hollywood'},
+  {name: 'model'},
+  {name: 'famous'},
+  {name: 'beautiful'}
 ]
 
 Tag.create!(TAGS)
