@@ -55,6 +55,7 @@
     &:before {
       content: '[';
       left: 0;
+      height: 59px;
     }
 
     &:after {
@@ -100,8 +101,9 @@
       animation-iteration-count: infinite;
 
       &__item {
-        line-height:40px;
+        line-height:5px;
         margin:60px;
+        font-size: 40px;
       }
     }
   }
