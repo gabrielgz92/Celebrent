@@ -4,6 +4,7 @@ class BookingsController < ApplicationController
 
   def index
     @bookings = current_user.bookings
+    @wishlists = current_user.wishlists
   end
 
   def create

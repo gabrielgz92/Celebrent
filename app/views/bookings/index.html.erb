@@ -5,34 +5,30 @@
 </div>
 <br>
 <div class="container">
-    <div class="bookings-card">
-      <% @bookings.each do |booking| %>
-        <% if booking.status!= 'Cancelled' %>
-          <div class="booking-product">
-            <div class="booking-image">
-              <%= image_tag(booking.celebrity.photo, class: "avatar") %>
-            </div>
-          <div class="card-booking-infos">
-            <div class="card-booking-name">
-              <%= link_to booking.celebrity.full_name, celebrity_path(booking.celebrity), class: "font-weight-light", style: 'color:black;'%>
-            </div>
-            <div>
-             <%= render 'bookings/update', booking: booking %>
-            </div>
-            <div class='card-rate-infos'>
-              <p>Status: <strong><%= booking.status %></strong></p>
-              <p>Rate per hour: <strong>$<%= booking.rate_per_hour %></strong></p>
-              <p>Total: <strong>$<%=booking.duration*booking.rate_per_hour %></strong></p>
-            </div>
-          </div>
-
-          <div class="card-booking-buttons">
-            <%= link_to "Cancel booking", booking_path(booking), method: :delete, data: { confirm: "You are ditching #{booking.celebrity.first_name}...are you sure about this?" }, class: 'btn btn-link' %>
-          </div>
-        <% end %>
+  <% @bookings.each do |booking| %>
+    <% if booking.status != 'Cancelled' %>
+      <div class="booking-product">
+        <div class="booking-photo">
+          <%= image_tag(booking.celebrity.photo, class: "avatar") %>
         </div>
-      <% end %>
-    </div>
-  </div>
-</div>
+        <div class="card-booking-infos">
+          <div class="card-booking-name">
+            <%= link_to booking.celebrity.full_name, celebrity_path(booking.celebrity), class: "btn btn-link update-btn"%>
+          </div>
+          <div class="booking-status-div">
+            <%= render 'bookings/update', booking: booking %></p>
+          </div>
+          <div class='card-rate-infos'>
+            <p>Status: <strong><%= booking.status %></strong></p>
+            <p>Rate per hour: <strong>$<%= booking.rate_per_hour %></strong></p>
+            <p>Total: <strong>$<%=booking.duration*booking.rate_per_hour %></strong></p>
+          </div>
+        </div>
 
+        <div class="card-booking-buttons">
+          <%= link_to "Cancel booking", booking_path(booking), method: :delete, data: { confirm: "You are ditching #{booking.celebrity.first_name}...are you sure about this?" }, class: 'btn btn-link' %>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>

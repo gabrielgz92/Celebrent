@@ -130,8 +130,10 @@ a {
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
+  justify-content: center;
   border: 20px;
-  margin: 8px 5px
+  margin: 10px auto;
+  width: 80%;
 }
 
 .booking-product img {
