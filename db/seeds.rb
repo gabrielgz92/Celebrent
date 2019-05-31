@@ -8,9 +8,9 @@
 
 require 'time'
 
-puts "Cleaning up database..."
-[Booking].each(&:destroy_all)
-puts "----------------------"
+# puts "Cleaning up database..."
+# [Tag].each(&:destroy_all)
+# puts "----------------------"
 
 
 # puts "Seeding Celebrities..."
@@ -175,7 +175,7 @@ puts "----------------------"
 # puts "Created #{Booking.count} bookings"
 # puts "----------------------"
 
-puts "Seeding Tags..."
+# puts "Seeding Tags..."
 
 # 10.times do
 #   Tag.create!(
@@ -183,24 +183,130 @@ puts "Seeding Tags..."
 #   )
 # end
 
-TAGS = [
-  {name: 'Ginger'},
-  {name: 'English'},
-  {name: 'Soccer Player'},
-  {name: 'Ex-president'},
-  {name: 'cat person'}
-]
+# TAGS = [
+#   {name: 'ginger'},
+#   {name: 'english'},
+#   {name: 'soccer player'},
+#   {name: 'ex-president'},
+#   {name: 'cat person'},
+#   {name: 'singer'},
+#   {name: 'actress'},
+#   {name: 'fashion'},
+#   {name: 'luxury'},
+#   {name: 'hollywood'},
+#   {name: 'model'},
+#   {name: 'famous'},
+#   {name: 'beautiful'}
+# ]
 
-Tag.create!(TAGS)
+# Tag.create!(TAGS)
 
-puts "Created #{Tag.count} tags"
-puts "----------------------"
+# puts "Created #{Tag.count} tags"
+# puts "----------------------"
 
-puts "Finished"
+# puts "Finished"
 
 
 # Jimie
 # https://media.licdn.com/dms/image/C5603AQEwHTecg3uVOQ/profile-displayphoto-shrink_800_800/0?e=1564617600&v=beta&t=sI_IQbmTic9tVEGJFGzDicLEdrSeJsApSpum3-ly9qM
+
+puts "Seeding Celebrities..."
+
+CELEBRITIES = [
+  {
+    first_name: 'Lionel',
+    last_name: 'Messi',
+    city: 'Rosario',
+    country: 'Argentina',
+    description: 'Soccer player',
+    gender: 'Male',
+    date_of_birth: Date.parse("Jun 27 1987"),
+    photo: "https://images.ole.com.ar/2019/05/08/F0TDNJzJC_1256x620__1.jpg",
+    rate_per_hour: 50000
+  },
+  {
+    first_name: 'Tom',
+    last_name: 'Hanks',
+    city: 'California',
+    country: 'United States of America',
+    description: 'Actor',
+    gender: 'Male',
+    date_of_birth: Date.parse("Jul 9 1956"),
+    photo: "https://upload.wikimedia.org/wikipedia/commons/9/98/Tom_Hanks_face.jpg",
+    rate_per_hour: 940
+  },
+   {
+    first_name: 'Iggy',
+    last_name: 'Pop',
+    city: 'Michigan',
+    country: 'United States of America',
+    description: 'Rock star',
+    gender: 'Male',
+    date_of_birth: Date.parse("Apr 21 1947"),
+    photo: "https://ksassets.timeincuk.net/wp/uploads/sites/55/2018/08/Death-Valley-Girls-iggy-pop-burger-video-920x584.jpg",
+    rate_per_hour: 25
+  },
+  {
+    first_name: 'John',
+    last_name: 'Lennon',
+    city: 'Liverpool',
+    country: 'United Kingdom',
+    description: 'Musician',
+    gender: 'Male',
+    date_of_birth: Date.parse("Oct 9 1940"),
+    photo: 'http://www.danpontefract.com/wp-content/uploads/2018/09/johnlennon.jpg',
+    rate_per_hour: 1040
+  },
+  {
+    first_name: 'Gisele',
+    last_name: 'Bündchen',
+    city: 'Horizontina',
+    country: 'Brazil',
+    description: 'Model',
+    gender: 'Female',
+    date_of_birth: Date.parse("Jul 20 1980"),
+    photo: "https://cdn.images.express.co.uk/img/dynamic/79/590x/454830_1.jpg",
+    rate_per_hour: 4000
+  },
+  {
+    first_name: 'Will',
+    last_name: 'Smith',
+    city: 'Philadelphia',
+    country: 'United States of America',
+    description: 'Actor, singer?',
+    gender: 'Male',
+    date_of_birth: Date.parse("Sep 25 1968"),
+    photo: "https://static.t13.cl/images/sizes/1200x675/1558963527-0631150870469.jpg",
+    rate_per_hour: 100
+  },
+  {
+    first_name: 'Denzel',
+    last_name: 'Washington',
+    city: 'New York',
+    country: 'United States of America',
+    description: 'Actor',
+    gender: 'Male',
+    date_of_birth: Date.parse("Dic 25 1968"),
+    photo: 'https://www.hola.com/imagenes/biografias/denzel-washington/83915-denzel2.jpg',
+    rate_per_hour: 100
+  },
+  {
+    first_name: 'PSY',
+    last_name: '.',
+    city: 'Seoul',
+    country: 'South Korea',
+    description: 'Singer',
+    gender: 'Male',
+    date_of_birth: Date.parse("Dic 25 1968"),
+    photo: "https://vignette.wikia.nocookie.net/youtube/images/c/c0/Officialpsy.jpg/revision/latest?cb=20181002141527",
+    rate_per_hour: 100
+  },
+  ]
+
+Celebrity.create!(CELEBRITIES)
+puts "Created #{Celebrity.count} celebrities"
+
+
 
 
 

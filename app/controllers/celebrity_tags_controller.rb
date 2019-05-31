@@ -5,13 +5,12 @@ class CelebrityTagsController < ApplicationController
     @celebrity_tag = CelebrityTag.new
   end
 
-   def create
+  def create
     names = params[:celebrity_tag][:tag].reject(&:empty?).map(&:downcase)
     names.each do |name|
       tag = Tag.find_or_create_by(name: name)
       CelebrityTag.create(celebrity: @celebrity, tag: tag)
     end
-
     redirect_to @celebrity
   end
 

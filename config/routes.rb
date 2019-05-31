@@ -12,7 +12,9 @@ Rails.application.routes.draw do
 
   resources :bookings, only: [:index, :edit, :update, :destroy]
   resources :users, only: :update
-  resources :wishlists, only: :destroy
+  resources :wishlists, only: [:index]
+
+  delete '/wishlist/:id', to:'wishlists#destroy_wishlists', as: 'wishlist'
 
   get '/landing', to: 'celebrities#landing'
 

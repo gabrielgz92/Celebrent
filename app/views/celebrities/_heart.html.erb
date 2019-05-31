@@ -1,0 +1,5 @@
+<% if current_user.wishlisted_celebrity?(@celebrity) %>
+  <%= link_to celebrity_wishlist_path(celebrity_id: @celebrity, id: @wishlist), controlller: :wishlists, method: :delete do %><i class="fas fa-heart black"></i><% end %>
+<% else %>
+  <%= link_to celebrity_wishlists_path(@celebrity), method: :post do %><i class="far fa-heart black"></i><% end %>
+<% end %>
