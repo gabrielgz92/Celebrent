@@ -17,8 +17,24 @@
     <br>
     <p><%= @celebrity.gender %></p>
     <p><%= @celebrity.date_of_birth.strftime("%F") %></p>
-    <p><%= @celebrity.description %></p>
+
+    <div class="tags-container">
+      <% @celebrity.tags.each do |tag| %>
+        <div class="celebrity-tags">
+          <h5><span class="badge badge-secondary"><%= tag.name %></span></h5>
+        </div>
+      <% end %>
+      <div class="celebrity-tags">
+        <div class="badge badge-warning" >
+          <%= link_to new_celebrity_celebrity_tag_path(@celebrity) do %>
+            <i class='fas fa-plus-circle'></i> Tag
+          <% end %>
+        </div>
+      </div>
+    </div>
+
     <%= render 'bookings/form', booking: @booking%>
+
   </div>
   <div class="container-map">
     <div
@@ -31,10 +47,7 @@
   </div>
 
 </div>
-<div class="test">
 
-
-</div>
 
 <%= link_to "Add Tags", new_celebrity_celebrity_tag_path(@celebrity) %>
 
