@@ -21,11 +21,13 @@
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
-  margin: 16px;
+  grid-gap: 32px;
+  margin: 16px 160px;
 }
 
 .card {
+  border: 0px solid black;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 .card-img {
