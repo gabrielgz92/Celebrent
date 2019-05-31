@@ -1,7 +1,10 @@
 
 <div class="wishlist-content d-flex">
   <div class="card-wishlists cards">
-    <div class="username-card"></div>
+    <div class="username-card">
+      <h2>Wish List for</h2>
+      <h3><%= current_user.first_name %> 🔥</h3>
+    </div>
       <% @wishlists.each do |wishlist| %>
       <div class="card-wishlist d-flex">
         <%= image_tag(wishlist.celebrity.photo)  %>
@@ -19,7 +22,23 @@
     <% end %>
   </div>
   <div class="wishlist-ad">
-
+    <div class="card">
+        <div class="promo">
+          <p class="mt-3">Sale</p>
+        </div>
+        <%= image_tag(@celebrity.photo, class: "card-img") %>
+        <div class="card-trip-infos">
+          <div>
+            <h2><%= @celebrity.full_name %></h2>
+            <p><%= @celebrity.description %></p>
+          </div>
+          <h2 class="card-trip-pricing mr-0">$<%= @celebrity.rate_per_hour - 10 %>
+          <h2 class="card-trip-pricing line-through">$<%= @celebrity.rate_per_hour %></h2>
+          <!-- <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="card-trip-user avatar-bordered"/> -->
+        </div>
+        <button type="button" class="btn btn-secondary">
+          <%= link_to "Book me!", celebrity_path(@celebrity)%></button>
+      </div>
   </div>
 </div>
 

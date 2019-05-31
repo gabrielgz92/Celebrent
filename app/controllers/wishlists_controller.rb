@@ -2,6 +2,7 @@ class WishlistsController < ApplicationController
   before_action :set_celebrity, only: %i[create destroy]
   def index
     @wishlists = current_user.wishlists
+    @celebrity = Celebrity.all.order('RANDOM()').first
   end
 
   def create
@@ -20,6 +21,7 @@ class WishlistsController < ApplicationController
     @wishlist.destroy
 
     redirect_to celebrity_path(@celebrity)
+    # redirect_to request.referer
 
     # add AJAX
   end
