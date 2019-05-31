@@ -2,12 +2,13 @@
   <div class="container">
     <div class="content">
       <div class="content__container">
-        <p class="content__container__text">Hang out with</p>
-        <ul class="content__container__list">
-          <% @celebrities.each do |celebrity| %>
-          <li class="content__container__list__item"><%= celebrity.first_name %>!</li>
-          <% end %>
-        </ul>
+        <p class="content__container__text">Hang out with
+          <span id="banner-typed-text"
+            data-celebrities="<%= @celebrities.map(&:first_name).to_json %>"
+          >John</span>
+        </p>
+
+
       </div>
       <h5 class="text-center" id="banner-slogan">Once in a lifetime experience to spend time with your favorite celebrity</h5>
     </div>
