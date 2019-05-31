@@ -8,6 +8,13 @@
   height: 120px;
 }
 
+.wishlist-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  margin: 16px;
+}
+
 .username-card{
   color: white;
   padding: 24px;
