@@ -14,10 +14,10 @@
         <%= image_tag(booking.celebrity.photo, class: "avatar") %>
       <div class="card-booking-infos">
         <div class="card-booking-name">
-          <%= link_to "#{booking.celebrity.first_name} #{booking.celebrity.last_name}", celebrity_path(booking.celebrity_id), class: "btn btn-link" %>
+          <%= link_to "#{booking.celebrity.first_name} #{booking.celebrity.last_name}", celebrity_path(booking.celebrity_id), class: "btn btn-link update-btn"%>
         </div>
         <div class="booking-status-div">
-          <p>Duration: <%= render 'bookings/update', booking: booking %></p>
+          <p>Duration:         Booking Date: <%= render 'bookings/update', booking: booking %></p>
         </div>
         <div class='card-rate-infos'>
           <p>Status: <strong><%= booking.status %></strong></p>

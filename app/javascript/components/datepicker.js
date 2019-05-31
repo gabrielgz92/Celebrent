@@ -4,10 +4,10 @@ import "flatpickr/dist/flatpickr.min.css";
 const initDatepicker = () => {
   console.log("hello from the datepicker...");
 
-  const input = document.getElementById("booking_booking_date");
+  const inputs = document.querySelectorAll(".datepicker");
 
-  if (input) {
-    flatpickr(input);
+  if (inputs) {
+    inputs.forEach(input => flatpickr(input));
   }
 }
 
