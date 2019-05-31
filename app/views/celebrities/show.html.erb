@@ -8,6 +8,7 @@
 
   <div class="container-info-text">
     <h3><%= @celebrity.full_name %>
+      <!-- make a div for heart -->
       <% if current_user.wishlisted_celebrity?(@celebrity) %>
         <%= link_to celebrity_wishlist_path(celebrity_id: @celebrity, id: @wishlist), controlller: :wishlists, method: :delete do %><i class="fas fa-heart black"></i><% end %>
       <% else %>
