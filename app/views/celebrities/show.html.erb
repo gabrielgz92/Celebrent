@@ -9,7 +9,7 @@
   <div class="container-info-text">
     <h3><%= @celebrity.full_name %>
       <% if current_user.wishlisted_celebrity?(@celebrity) %>
-        <i class="fas fa-heart black"></i>
+        <%= link_to celebrity_wishlist_path(celebrity_id: @celebrity, id: @wishlist), controlller: :wishlists, method: :delete do %><i class="fas fa-heart black"></i><% end %>
       <% else %>
       <%= link_to celebrity_wishlists_path(@celebrity), method: :post do %><i class="far fa-heart black"></i><% end %>
       <% end %>
@@ -47,3 +47,12 @@
   </div>
 
 </div>
+
+
+<%= link_to "Add Tags", new_celebrity_celebrity_tag_path(@celebrity) %>
+
+
+
+
+
+
