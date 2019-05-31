@@ -8,7 +8,9 @@ const buildMap = () => {
 
   const options = {
     container: 'map',
-    style: 'mapbox://styles/mapbox/dark-v10'
+    style: 'mapbox://styles/mapbox/dark-v10',
+    interactive: false,
+    zoom: 1.2
   }
 
   if (markers.length == 1) {
