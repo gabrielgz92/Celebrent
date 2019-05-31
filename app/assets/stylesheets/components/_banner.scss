@@ -55,6 +55,7 @@
     &:before {
       content: '[';
       left: 0;
+      vertical-align: center;
       height: 59px;
     }
 
@@ -62,21 +63,22 @@
       content: ']';
       position: absolute;
       right: 0;
+      padding: 10px;
     }
 
     &:after, &:before {
       position: absolute;
       top: 0;
 
-      color: #16a085;
+      color: #white;
       font-size: 42px;
       line-height: 40px;
 
       -webkit-animation-name: opacity;
-      -webkit-animation-duration: 2s;
+      -webkit-animation-duration: 1s;
       -webkit-animation-iteration-count: infinite;
       animation-name: opacity;
-      animation-duration: 2s;
+      animation-duration: 1s;
       animation-iteration-count: infinite;
     }
 

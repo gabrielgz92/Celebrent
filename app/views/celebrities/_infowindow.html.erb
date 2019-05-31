@@ -1,3 +1,10 @@
-<div>
-  <%= link_to celebrity.full_name, celebrity_path(celebrity["id"]), {style: 'color: black;'} %>
+<div class="card" style="border:none; background-color:transparent;">
+  <div class="card-body" style="padding: 0px;">
+    <div class="marker-photo" style="display: flex; justify-content: center;">
+    <%= image_tag(celebrity.photo, class: "avatar") %>
+    </div>
+    <div class="marker-info ml-3">
+      <h6><%= link_to celebrity.full_name,celebrity_path(celebrity), {style: 'color: black'} %></h6>
+    </div>
+  </div>
 </div>

@@ -228,12 +228,13 @@ a {
 
 .container-show-b {
   margin: auto;
-  width: 60vw;
+  width: 100vw;
   display: flex;
   background-color: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  height: 400px;
+  height: 680px;
   border-radius: 2px;
+  margin-top:16px;
 }
 
 .container-info-text {
@@ -241,6 +242,10 @@ a {
   text-align: center;
 }
 
+
+.card-body-b {
+  padding: 0px;
+}
 
 // tags
 .tags-container {
@@ -276,4 +281,5 @@ h5 {
   font-size: 16px;
   margin: 0;
   padding-bottom: 4px;
+
 }
