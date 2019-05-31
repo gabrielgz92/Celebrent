@@ -123,8 +123,7 @@ a {
 
 .booking-product {
   overflow: hidden;
-  height: 120px;
-  width: 800px;
+  height: 150px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
@@ -169,7 +168,7 @@ a {
 
 .edit_booking {
   display: flex;
-  align-items: space-between;
+  align-items: space-around;
 }
 
 #booking_duration {
@@ -177,9 +176,8 @@ a {
 }
 
 .booking-status-div {
-  width: 240px;
+  width: 540px;
   justify-content: space-between;
-  align-items: flex-start;
   margin: 0px;
   padding-right: 10px;
   padding-left: 10px;
@@ -187,6 +185,19 @@ a {
 
 .card-booking-name {
   padding-right: 20px
+}
+.card-rate-infos {
+  width: 130px;
+}
+
+#booking_booking_date {
+  margin-left: 10px;
+  width: 150px;
+  height: 25px;
+}
+
+.btn-link {
+  padding-top: 0px;
 }
 
 .container-photo {

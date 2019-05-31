@@ -1,4 +1,6 @@
 <%= simple_form_for (booking)  do |f| %>
   <%= f.input :duration, label: false, collection: 1..10 %>
+  <%= f.input :booking_date, as: :string, required: false, label: false,defaultDate: booking.booking_date, input_html: {class: "datepicker"} %>
+
   <%= f.button :submit, 'Update', data: {confirm: "You about to change your booking with #{booking.celebrity.first_name}. Are you sure you're ready to do this?"}, class: 'btn btn-link' %>
 <% end %>
