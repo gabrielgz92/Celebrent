@@ -9,11 +9,11 @@
 require 'time'
 
 puts "Cleaning up database..."
-[Tag].each(&:destroy_all)
-puts "----------------------"
+# [Tag].each(&:destroy_all)
+# puts "----------------------"
 
 
-# puts "Seeding Celebrities..."
+puts "Seeding Celebrities..."
 
 # CELEBRITIES = [
 #   {
@@ -175,7 +175,7 @@ puts "----------------------"
 # puts "Created #{Booking.count} bookings"
 # puts "----------------------"
 
-puts "Seeding Tags..."
+# puts "Seeding Tags..."
 
 # 10.times do
 #   Tag.create!(
@@ -183,25 +183,41 @@ puts "Seeding Tags..."
 #   )
 # end
 
-TAGS = [
-  {name: 'ginger'},
-  {name: 'english'},
-  {name: 'soccer player'},
-  {name: 'ex-president'},
-  {name: 'cat person'},
-  {name: 'singer'},
-  {name: 'actress'},
-  {name: 'fashion'},
-  {name: 'luxury'},
-  {name: 'hollywood'},
-  {name: 'model'},
-  {name: 'famous'},
-  {name: 'beautiful'}
-]
+# TAGS = [
+#   {name: 'ginger'},
+#   {name: 'english'},
+#   {name: 'soccer player'},
+#   {name: 'ex-president'},
+#   {name: 'cat person'},
+#   {name: 'singer'},
+#   {name: 'actress'},
+#   {name: 'fashion'},
+#   {name: 'luxury'},
+#   {name: 'hollywood'},
+#   {name: 'model'},
+#   {name: 'famous'},
+#   {name: 'beautiful'}
+# ]
 
-Tag.create!(TAGS)
+# Tag.create!(TAGS)
 
-puts "Created #{Tag.count} tags"
+# puts "Created #{Tag.count} tags"
+
+CELEBRITIES = [
+  {
+    first_name: 'Kylie',
+    last_name: 'Minogue',
+    city: 'Melbourne',
+    country: 'Australia',
+    description: 'Singer',
+    gender: 'Female',
+    date_of_birth: Date.parse("May 28 1968"),
+    photo: "https://ichef.bbci.co.uk/news/660/cpsprodpb/7485/production/_93992892_98b03f99-3932-4453-b3f1-cdf15bc36f29.jpg",
+    rate_per_hour: 1000
+  }]
+
+Celebrity.create!(CELEBRITIES)
+puts "Created #{Celebrity.count} celebrities"
 puts "----------------------"
 
 puts "Finished"
