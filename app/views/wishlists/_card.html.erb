@@ -1,0 +1,25 @@
+
+<div class="wishlist-content d-flex">
+  <div class="card-wishlists cards">
+    <div class="username-card"></div>
+      <% @wishlists.each do |wishlist| %>
+      <div class="card-wishlist d-flex">
+        <%= image_tag(wishlist.celebrity.photo)  %>
+        <div class="card-wishlist-infos">
+          <h2><%= wishlist.celebrity.full_name %></h2>
+          <p><strong><%= wishlist.celebrity.description %></strong></p>
+          <%= link_to "book now", celebrity_path(wishlist.celebrity),class: "btn btn-light btn-sm mt-2" %>
+        </div>
+        <div class="delete-button">
+          <%= link_to wishlist_path(wishlist), method: :delete, style: 'color:black;' do %>
+            <i class="fas fa-times-circle"></i>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <div class="wishlist-ad">
+
+  </div>
+</div>
+

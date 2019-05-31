@@ -24,6 +24,13 @@ class WishlistsController < ApplicationController
     # add AJAX
   end
 
+  def destroy_wishlists
+    @wishlist = Wishlist.find(params[:id])
+    @wishlist.destroy
+
+    redirect_to wishlists_path
+  end
+
   private
 
   def set_celebrity
