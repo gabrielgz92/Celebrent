@@ -1,6 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: #191a1a;
   margin-bottom: -16px;
 }
 
@@ -10,4 +10,14 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+.navbar-brand-text-light {
+  color: orange;
+  font-family: 'Arvo', serif;
+  font-size: 17px;
+}
+
+.navbar-brand-text-light .hover {
+  color: gray;
 }

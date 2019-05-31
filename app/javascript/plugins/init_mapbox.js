@@ -8,7 +8,7 @@ const buildMap = () => {
 
   const options = {
     container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v10'
+    style: 'mapbox://styles/mapbox/dark-v10'
   }
 
   if (markers.length == 1) {
@@ -23,8 +23,7 @@ const buildMap = () => {
 const addMarkersToMap = (map, markers) => {
   markers.forEach((marker) => {
     const popup = new mapboxgl.Popup().setHTML(marker.infoWindow);
-    console.log(popup)
-    const mapMarker = new mapboxgl.Marker()
+    const mapMarker = new mapboxgl.Marker({color: 'orange'})
      mapMarker.setLngLat([ marker.lng, marker.lat ])
 
      if (markers.length > 1) {
