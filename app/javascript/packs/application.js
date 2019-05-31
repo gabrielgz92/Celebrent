@@ -1,10 +1,12 @@
+import 'mapbox-gl/dist/mapbox-gl.css';
+import 'select2/dist/css/select2.css';
+
 import "bootstrap";
 
-import 'mapbox-gl/dist/mapbox-gl.css';
 import { initMapbox } from '../plugins/init_mapbox';
-initMapbox();
-
-import 'select2/dist/css/select2.css';
 import { initSelect2 } from '../components/init_select2';
+import { loadDynamicBannerText } from '../components/banner';
 
+initMapbox();
 initSelect2();
+loadDynamicBannerText();

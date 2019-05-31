@@ -213,7 +213,7 @@ a {
   display: flex;
   background-color: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  height: 400px;
+  height: 680px;
   border-radius: 2px;
   margin-top:16px;
 }
@@ -221,4 +221,8 @@ a {
 .container-info-text {
   margin: 30px 79px;
   text-align: center;
+}
+
+.card-body-b {
+  padding: 0px;
 }

@@ -1,7 +1,7 @@
 .mapboxgl-popup {
   max-width: 200px;
   height: 24px;
-  padding: 10px;
+  // padding: 10px;
 }
 
 .mapboxgl-popup-content-wrapper{
@@ -20,6 +20,7 @@
 
 .info-window {
   color: black;
+  padding: 0px;
 }
 
 .mapboxgl-popup.mapboxgl-popup-anchor-bottom{
