@@ -41,6 +41,7 @@
     <div
       id="map"
       style="width: 400px;
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
       height: 565px;"
       data-markers="<%= @markers.to_json %>"
       data-mapbox-api-key=<%= ENV['MAPBOX_API_KEY'] %>
@@ -50,7 +51,6 @@
 </div>
 
 
-<%= link_to "Add Tags", new_celebrity_celebrity_tag_path(@celebrity) %>
 
 
 

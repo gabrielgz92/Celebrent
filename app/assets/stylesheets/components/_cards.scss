@@ -210,6 +210,7 @@ a {
   height: 100%;
   width: 100%;
   object-fit: cover;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 }
 
 .container-show {
@@ -250,4 +251,27 @@ a {
 
 h5 {
   font-weight: normal;
+}
+
+//
+
+.form-category {
+  width: 200px;
+  padding: 10px 18px;
+  border-radius: 5px;
+  box-shadow: 0 0 4px rgba(0,0,0,0.2);
+  margin-top: 40px;
+}
+
+.form-category h2 {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0;
+  padding-bottom: 28px;
+}
+
+.form-category h3 {
+  font-size: 16px;
+  margin: 0;
+  padding-bottom: 4px;
 }
