@@ -11,6 +11,8 @@ class WishlistsController < ApplicationController
     @wishlist.save
 
     redirect_to celebrity_path(@celebrity)
+
+    # add AJAX
   end
 
   def destroy
@@ -18,6 +20,8 @@ class WishlistsController < ApplicationController
     @wishlist.destroy
 
     redirect_to celebrity_path(@celebrity)
+
+    # add AJAX
   end
 
   private
